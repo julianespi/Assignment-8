@@ -26,7 +26,6 @@ void Deck(int& cardUser)
 	int cardTotal;
 	vector <int> cardCount;
 	deque <int> playDeque;
-	stack <int> cardDeckSetup;
 	deque <int> deckOne;
 	deque <int> deckTwo;
 
