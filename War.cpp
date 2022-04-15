@@ -9,7 +9,7 @@
 using namespace std;
 
 //precondition: cardUser is set
-//postcondition: sets up player decks
+//postcondition: sets up War
 void Deck(int& cardUser)
 {
 	int i = 0;
