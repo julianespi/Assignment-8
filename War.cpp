@@ -9,7 +9,7 @@
 using namespace std;
 
 //precondition: cardUser is set
-//postcondition: sets up War
+//postcondition: sets up player decks
 void Deck(int& cardUser)
 {
 	int i = 0;
@@ -102,6 +102,38 @@ void Deck(int& cardUser)
 		while (inPlay != 0 && gameComplete == false)
 		{
 			//cin.ignore();
+			if (deckOne.empty() == true && playerOneWin == false)
+			{
+				cout << "Player 1 has run out of cards! Player 2 wins!" << endl;
+				gameComplete = true;
+				break;
+			}
+			if (countPSTotal != 0)
+			{
+				countPS = 0;
+				while (countPSTotal != 0)
+				{
+					countPSTotal--;
+					deckOne.push_back(playDeque.front());
+					playDeque.pop_front();
+				}
+			}
+			if (deckTwo.empty() == true && playerTwoWin == false)
+			{
+				cout << "Player 2 has run out of cards! Player 1 wins!" << endl;
+				gameComplete = true;
+				break;
+			}
+			if (countPSTotal != 0)
+			{
+				countPS = 0;
+				while (countPSTotal != 0)
+				{
+					countPSTotal--;
+					deckOne.push_back(playDeque.front());
+					playDeque.pop_front();
+				}
+			}
 			cout << "Player 1 plays: " << setw(3);
 			cout << deckOne.front();
 			cout << " || " << "Players 2 plays: " << setw(3);
@@ -132,6 +164,7 @@ void Deck(int& cardUser)
 				{
 					cout << "Player 2 has run out of cards! Player 1 wins!" << endl;
 					gameComplete = true;
+					break;
 				}
 				if (countPSTotal != 0)
 				{
@@ -140,8 +173,12 @@ void Deck(int& cardUser)
 					{
 						countPSTotal--;
 						deckOne.push_back(playDeque.front());
-						playDeque.pop_front();	
+						playDeque.pop_front();
 					}
+				}
+				if (gameComplete == true)
+				{
+					break;
 				}
 			}
 			if (deckTwo.front() > deckOne.front() && inPlay != 0 && gameComplete == false)
@@ -170,6 +207,7 @@ void Deck(int& cardUser)
 				{
 					cout << "Player 1 has run out of cards! Player 2 wins!" << endl;
 					gameComplete = true;
+					break;
 				}
 				if (countPSTotal != 0)
 				{
@@ -180,6 +218,10 @@ void Deck(int& cardUser)
 						deckOne.push_back(playDeque.front());
 						playDeque.pop_front();
 					}
+				}
+				if (gameComplete == true)
+				{
+					break;
 				}
 			}
 			if (deckOne.front() == deckTwo.front() && inPlay != 0 && gameComplete == false)
