@@ -101,7 +101,7 @@ void Deck(int& cardUser)
 		bool takenOne = false;
 		while (inPlay != 0 && gameComplete == false)
 		{
-			//cin.ignore();
+			cin.ignore();
 			if (deckOne.empty() == true && playerOneWin == false)
 			{
 				cout << "Player 1 has run out of cards! Player 2 wins!" << endl;
