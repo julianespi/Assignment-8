@@ -176,10 +176,10 @@ void Deck(int& cardUser)
 						playDeque.pop_front();
 					}
 				}
-				if (gameComplete == true)
-				{
-					break;
-				}
+			}
+			if (gameComplete == true)
+			{
+				break;
 			}
 			if (deckTwo.front() > deckOne.front() && inPlay != 0 && gameComplete == false)
 			{
@@ -219,10 +219,10 @@ void Deck(int& cardUser)
 						playDeque.pop_front();
 					}
 				}
-				if (gameComplete == true)
-				{
-					break;
-				}
+			}
+			if (gameComplete == true)
+			{
+				break;
 			}
 			if (deckOne.front() == deckTwo.front() && inPlay != 0 && gameComplete == false)
 			{
