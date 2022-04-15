@@ -2,7 +2,6 @@
 #include <deque>
 #include <stack>
 #include <vector>
-#include <stdlib.h>
 #include "input.h"
 
 using namespace std;
