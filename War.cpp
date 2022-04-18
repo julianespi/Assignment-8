@@ -1,12 +1,3 @@
-#include <iostream>
-#include <deque>
-#include <stack>
-#include <vector>
-#include "input.h"
-#include <Windows.h>
-#include <iomanip>
-
-using namespace std;
 
 //precondition: cardUser is set
 //postcondition: sets up player decks
