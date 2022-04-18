@@ -1,4 +1,3 @@
-
 //precondition: cardUser is set
 //postcondition: sets up player decks
 void Deck(int& cardUser)
@@ -99,31 +98,11 @@ void Deck(int& cardUser)
 				gameComplete = true;
 				break;
 			}
-			if (countPSTotal != 0)
-			{
-				countPS = 0;
-				while (countPSTotal != 0)
-				{
-					countPSTotal--;
-					deckOne.push_back(playDeque.front());
-					playDeque.pop_front();
-				}
-			}
 			if (deckTwo.empty() == true && deckOne.empty() == false && playerTwoWin == false)
 			{
 				cout << "Player 2 has run out of cards! Player 1 wins with " <<  cardTotal << " in their deck!" << endl;
 				gameComplete = true;
 				break;
-			}
-			if (countPSTotal != 0)
-			{
-				countPS = 0;
-				while (countPSTotal != 0)
-				{
-					countPSTotal--;
-					deckOne.push_back(playDeque.front());
-					playDeque.pop_front();
-				}
 			}
 			cout << "Player 1 plays: " << setw(3);
 			cout << deckOne.front();
@@ -247,12 +226,14 @@ void Deck(int& cardUser)
 					if (coinFlip == 1)
 					{
 						cout << "Player 1 wins the coin flip!" << endl;
+						cout << "Player 1 wins with " << cardTotal << " cards!" << endl;
 						gameComplete = true;
 						playerOneWin = true;
 					}
 					if (coinFlip == 2)
 					{
 						cout << "Player 2 wins the coin flip!" << endl;
+						cout << "Player 2 wins with " << cardTotal << " cards!" << endl;
 						gameComplete = true;
 						playerTwoWin = true;
 					}
