@@ -104,7 +104,7 @@ void Deck(int& cardUser)
 			cin.ignore();
 			if (deckOne.empty() == true && playerOneWin == false)
 			{
-				cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << "in their deck!" << endl;
+				cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << " in their deck!" << endl;
 				gameComplete = true;
 				break;
 			}
@@ -120,7 +120,7 @@ void Deck(int& cardUser)
 			}
 			if (deckTwo.empty() == true && playerTwoWin == false)
 			{
-				cout << "Player 2 has run out of cards! Player 1 wins with " <<  cardTotal << "in their deck!" << endl;
+				cout << "Player 2 has run out of cards! Player 1 wins with " <<  cardTotal << " in their deck!" << endl;
 				gameComplete = true;
 				break;
 			}
@@ -162,7 +162,7 @@ void Deck(int& cardUser)
 				inPlay--;
 				if (deckTwo.empty() == true && playerTwoWin == false)
 				{
-					cout << "Player 2 has run out of cards! Player 1 wins with " << cardTotal << "in their deck!"  << endl;
+					cout << "Player 2 has run out of cards! Player 1 wins with " << cardTotal << " in their deck!"  << endl;
 					gameComplete = true;
 					break;
 				}
@@ -205,7 +205,7 @@ void Deck(int& cardUser)
 				inPlay--;
 				if (deckOne.empty() == true && playerOneWin == false)
 				{
-					cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << "in their deck!"  << endl;
+					cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << " in their deck!"  << endl;
 					gameComplete = true;
 					break;
 				}
