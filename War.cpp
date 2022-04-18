@@ -102,7 +102,7 @@ void Deck(int& cardUser)
 		while (inPlay != 0 && gameComplete == false)
 		{
 			cin.ignore();
-			if (deckOne.empty() == true && playerOneWin == false)
+			if (deckOne.empty() == true && deckTwo.empty() == false && playerOneWin == false)
 			{
 				cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << " in their deck!" << endl;
 				gameComplete = true;
@@ -118,7 +118,7 @@ void Deck(int& cardUser)
 					playDeque.pop_front();
 				}
 			}
-			if (deckTwo.empty() == true && playerTwoWin == false)
+			if (deckTwo.empty() == true && deckOne.empty() == false && playerTwoWin == false)
 			{
 				cout << "Player 2 has run out of cards! Player 1 wins with " <<  cardTotal << " in their deck!" << endl;
 				gameComplete = true;
@@ -160,7 +160,7 @@ void Deck(int& cardUser)
 					}
 				}
 				inPlay--;
-				if (deckTwo.empty() == true && playerTwoWin == false)
+				if (deckTwo.empty() == true && deckOne.empty() == false && playerTwoWin == false)
 				{
 					cout << "Player 2 has run out of cards! Player 1 wins with " << cardTotal << " in their deck!"  << endl;
 					gameComplete = true;
@@ -203,7 +203,7 @@ void Deck(int& cardUser)
 					}
 				}
 				inPlay--;
-				if (deckOne.empty() == true && playerOneWin == false)
+				if (deckOne.empty() == true && deckTwo.empty() == false && playerOneWin == false)
 				{
 					cout << "Player 1 has run out of cards! Player 2 wins with " << cardTotal << " in their deck!"  << endl;
 					gameComplete = true;
