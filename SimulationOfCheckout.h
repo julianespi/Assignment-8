@@ -33,6 +33,8 @@ bool checkoutQueue::empty() const
 	return (size == 0);
 }
 
+//precondition: none
+//postcondition: adds a new customer to the register
 void checkoutQueue::addCustomer()
 {
 	int customer = rand() % 100 + 1;
@@ -40,6 +42,8 @@ void checkoutQueue::addCustomer()
 	size++;
 }
 
+//precondition: none
+//postcondition: removes a customer finished at the register
 void checkoutQueue::removeCustomer()
 {
 
@@ -90,6 +94,8 @@ int newCustomer();
 void displayLine(vector<checkoutQueue>& vec, int helped, int endTime);
 int returnShortest(vector<checkoutQueue>& vec);
 
+//precondition: none
+//postcondition: runs a simulation of Costco checkout based on user parameters
 void SimOfCheckout()
 {
 	vector<checkoutQueue> cq;
@@ -138,7 +144,8 @@ void SimOfCheckout()
 	} while (timer(endTime));
 }
 
-
+//precondition: none
+//postcondition: displays costco queue and service time
 void displayLine(vector<checkoutQueue>& vec, int helped, int endTime)
 {
 	int currentTime = endTime - time(0);
@@ -152,6 +159,8 @@ void displayLine(vector<checkoutQueue>& vec, int helped, int endTime)
 	}
 }
 
+//precondition: none
+//postcondition: adds new customers that are at Costco checkout
 int newCustomer()
 {
 	int amountOfCustomers = 5;
@@ -162,6 +171,8 @@ int newCustomer()
 	return amountOfCustomers;
 }
 
+//precondition: none
+//postcondition: returns false while integer is above int holder
 bool timer(int endTime)
 {
 	int holder;
@@ -169,6 +180,8 @@ bool timer(int endTime)
 	return(holder < endTime);
 }
 
+//precondition: none
+//postcondition: places customer at register with an empty or currently shortest queue
 int returnShortest(vector<checkoutQueue>& vec)
 {
 	int shortest = 0;
