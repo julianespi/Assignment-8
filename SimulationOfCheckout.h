@@ -28,6 +28,8 @@ public:
 
 };
 checkoutQueue::checkoutQueue() : size(0) {}
+//precondition: none
+//postcondition: return true if vector is empty
 bool checkoutQueue::empty() const
 {
 	return (size == 0);
@@ -51,6 +53,8 @@ void checkoutQueue::removeCustomer()
 	size--;
 }
 
+//precondition: none
+//postcondition: returns true if vector size is smaller than right hand size
 bool checkoutQueue::operator <(const checkoutQueue& RHS)
 {
 	return(this->size < RHS.size);
@@ -79,6 +83,9 @@ ostream& operator <<(ostream& outs, const checkoutQueue& obj)
 		return outs;
 	}
 }
+
+//precondition: none
+//postcondition: returns size of vector
 int checkoutQueue::getSize() const
 {
 	return size;
